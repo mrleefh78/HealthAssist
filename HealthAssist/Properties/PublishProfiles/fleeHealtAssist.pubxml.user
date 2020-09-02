@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\FLee\MyFiles\HealthAssist\pub</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AdminMain.Master">
+      <publishTime>08/09/2020 12:10:50</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>03/28/2020 14:37:59</publishTime>
+    </File>
+    <File Include="Appointment.aspx">
+      <publishTime>07/14/2020 22:41:21</publishTime>
+    </File>
+    <File Include="AppointmentDetail.aspx">
+      <publishTime>08/15/2020 22:37:28</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>03/28/2020 14:37:59</publishTime>
+    </File>
+    <File Include="bin/HealthAssist.dll">
+      <publishTime>08/17/2020 22:23:53</publishTime>
+    </File>
+    <File Include="bin/iTextSharp.dll">
+      <publishTime>12/01/2011 16:26:30</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>07/12/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>10/03/2016 14:26:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>10/03/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>09/03/2016 12:00:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>10/03/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>10/03/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>09/03/2016 11:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>02/01/2011 14:37:24</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/09/2019 00:56:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="BrightCareAdmin.Master">
+      <publishTime>08/17/2020 20:33:18</publishTime>
+    </File>
+    <File Include="BrightCareStaff.Master">
+      <publishTime>08/17/2020 22:03:52</publishTime>
+    </File>
+    <File Include="ClientDetail.aspx">
+      <publishTime>05/29/2020 22:12:02</publishTime>
+    </File>
+    <File Include="Clients.aspx">
+      <publishTime>06/27/2020 18:32:24</publishTime>
+    </File>
+    <File Include="ConfirmLogin.aspx">
+      <publishTime>04/06/2020 22:16:31</publishTime>
+    </File>
+    <File Include="ContactDetail.aspx">
+      <publishTime>05/29/2020 22:12:02</publishTime>
+    </File>
+    <File Include="Contacts.aspx">
+      <publishTime>07/03/2020 19:42:24</publishTime>
+    </File>
+    <File Include="Dashboard.aspx">
+      <publishTime>07/10/2020 23:18:23</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>05/15/2020 20:54:42</publishTime>
+    </File>
+    <File Include="Facility.aspx">
+      <publishTime>07/09/2020 21:08:57</publishTime>
+    </File>
+    <File Include="FacilityDetail.aspx">
+      <publishTime>05/23/2020 22:14:37</publishTime>
+    </File>
+    <File Include="Invoice.aspx">
+      <publishTime>04/06/2020 22:16:31</publishTime>
+    </File>
+    <File Include="InvoiceDetail.aspx">
+      <publishTime>05/29/2020 22:12:02</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>05/16/2020 09:59:14</publishTime>
+    </File>
+    <File Include="Main.Master">
+      <publishTime>07/29/2020 03:58:17</publishTime>
+    </File>
+    <File Include="NewAppoinment.aspx">
+      <publishTime>05/29/2020 22:12:02</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/17/2020 12:12:30</publishTime>
+    </File>
+    <File Include="Patient.aspx">
+      <publishTime>08/10/2020 21:51:43</publishTime>
+    </File>
+    <File Include="PatientCase.aspx">
+      <publishTime>07/03/2020 21:16:33</publishTime>
+    </File>
+    <File Include="PatientCaseDetail.aspx">
+      <publishTime>06/13/2020 12:59:43</publishTime>
+    </File>
+    <File Include="PatientDetail.aspx">
+      <publishTime>07/24/2020 00:40:59</publishTime>
+    </File>
+    <File Include="PatientEncounter.aspx">
+      <publishTime>08/10/2020 21:58:14</publishTime>
+    </File>
+    <File Include="PatientEncounterDetail.aspx">
+      <publishTime>08/17/2020 12:13:41</publishTime>
+    </File>
+    <File Include="PatientNew.aspx">
+      <publishTime>07/23/2020 12:33:59</publishTime>
+    </File>
+    <File Include="PatientNewCase.aspx">
+      <publishTime>05/29/2020 22:08:40</publishTime>
+    </File>
+    <File Include="PatientRegistration.aspx">
+      <publishTime>08/09/2020 19:21:54</publishTime>
+    </File>
+    <File Include="PatientSearch.aspx">
+      <publishTime>05/29/2020 10:38:23</publishTime>
+    </File>
+    <File Include="Physician.aspx">
+      <publishTime>08/10/2020 21:51:03</publishTime>
+    </File>
+    <File Include="Physician/EncounterDetail.aspx">
+      <publishTime>08/16/2020 21:06:28</publishTime>
+    </File>
+    <File Include="Physician/EncounterList.aspx">
+      <publishTime>08/09/2020 22:14:29</publishTime>
+    </File>
+    <File Include="Physician/MyActivePatients.aspx">
+      <publishTime>07/11/2020 13:12:47</publishTime>
+    </File>
+    <File Include="Physician/MyInfo.aspx">
+      <publishTime>07/11/2020 12:04:34</publishTime>
+    </File>
+    <File Include="Physician/MyPatientDetail.aspx">
+      <publishTime>08/16/2020 21:11:50</publishTime>
+    </File>
+    <File Include="Physician/MyPatients.aspx">
+      <publishTime>07/25/2020 00:00:52</publishTime>
+    </File>
+    <File Include="Physician/PhysicianHtmlTemplate.aspx">
+      <publishTime>08/01/2020 18:08:10</publishTime>
+    </File>
+    <File Include="Physician/Profile.aspx">
+      <publishTime>08/09/2020 19:21:53</publishTime>
+    </File>
+    <File Include="PhysicianDetail.aspx">
+      <publishTime>08/10/2020 21:38:45</publishTime>
+    </File>
+    <File Include="PhysicianMain.Master">
+      <publishTime>07/29/2020 05:17:24</publishTime>
+    </File>
+    <File Include="Reports/ConsentForm.aspx">
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Reports/MedCertificate.aspx">
+      <publishTime>08/03/2020 23:22:11</publishTime>
+    </File>
+    <File Include="Reports/PatientPrescription.aspx">
+      <publishTime>07/25/2020 01:03:59</publishTime>
+    </File>
+    <File Include="Reports/Prescription.aspx">
+      <publishTime>07/25/2020 00:55:04</publishTime>
+    </File>
+    <File Include="Reports/Report.Master">
+      <publishTime>07/24/2020 20:20:40</publishTime>
+    </File>
+    <File Include="Reports/Telemed_MED CERT/images/image1.jpg">
+      <publishTime>07/20/2020 02:39:50</publishTime>
+    </File>
+    <File Include="Reports/Telemed_MED CERT/Telemed_MEDCERT.html">
+      <publishTime>07/24/2020 20:18:11</publishTime>
+    </File>
+    <File Include="Reports/Telemed_Prescription/images/image1.jpg">
+      <publishTime>07/20/2020 02:50:52</publishTime>
+    </File>
+    <File Include="Reports/Telemed_Prescription/images/image2.jpg">
+      <publishTime>07/20/2020 02:50:52</publishTime>
+    </File>
+    <File Include="Reports/Telemed_Prescription/Telemed_Prescription.html">
+      <publishTime>07/25/2020 00:36:27</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.js">
+      <publishTime>03/28/2020 14:37:59</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.min.js">
+      <publishTime>03/28/2020 14:37:59</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>07/29/2020 04:17:55</publishTime>
+    </File>
+    <File Include="Staff/PatientDetail.aspx">
+      <publishTime>08/16/2020 21:51:08</publishTime>
+    </File>
+    <File Include="Staff/PatientRegistration.aspx">
+      <publishTime>08/15/2020 23:18:39</publishTime>
+    </File>
+    <File Include="UserDetail.aspx">
+      <publishTime>07/25/2020 10:56:07</publishTime>
+    </File>
+    <File Include="Users.aspx">
+      <publishTime>07/25/2020 14:41:46</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/17/2020 22:10:37</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>03/06/2020 17:20:43</publishTime>
+    </File>
+    <File Include="WebForm2.aspx">
+      <publishTime>06/13/2020 13:59:07</publishTime>
+    </File>
+    <File Include="WebForm3.aspx">
+      <publishTime>06/13/2020 13:57:45</publishTime>
+    </File>
+    <File Include="WebForm5.aspx">
+      <publishTime>07/29/2020 04:58:59</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

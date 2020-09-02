@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B6F5A462-14F6-4571-BDE2-9EC72275F096}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HealthAssist</RootNamespace>
+    <AssemblyName>HealthAssist</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iTextSharp, Version=4.1.6.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <HintPath>..\packages\iTextSharp-LGPL.4.1.6\lib\iTextSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfirmLogin.aspx" />
+    <Content Include="Contacts.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Main.Master" />
+    <Content Include="PatientCase.aspx" />
+    <Content Include="Patient.aspx" />
+    <Content Include="PatientEncounterDetail.aspx" />
+    <Content Include="PatientRegistration.aspx" />
+    <Content Include="PhysicianMain.Master" />
+    <Content Include="PatientDetail.aspx" />
+    <Content Include="PatientCaseDetail.aspx" />
+    <Content Include="PatientNewCase.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Physician.aspx" />
+    <Content Include="PhysicianDetail.aspx" />
+    <Content Include="Clients.aspx" />
+    <Content Include="ClientDetail.aspx" />
+    <Content Include="Facility.aspx" />
+    <Content Include="FacilityDetail.aspx" />
+    <Content Include="ContactDetail.aspx" />
+    <Content Include="Invoice.aspx" />
+    <Content Include="InvoiceDetail.aspx" />
+    <Content Include="Appointment.aspx" />
+    <Content Include="AppointmentDetail.aspx" />
+    <Content Include="PatientSearch.aspx" />
+    <Content Include="NewAppoinment.aspx" />
+    <Content Include="AdminMain.Master" />
+    <Content Include="Physician\EncounterList.aspx" />
+    <Content Include="Physician\EncounterDetail.aspx" />
+    <Content Include="Physician\Profile.aspx" />
+    <Content Include="Reports\ConsentForm.aspx" />
+    <Content Include="Reports\PatientPrescription.aspx" />
+    <Content Include="Reports\Telemed_MED CERT\images\image1.jpg" />
+    <Content Include="Reports\Telemed_MED CERT\Telemed_MEDCERT.html" />
+    <Content Include="Reports\Telemed_Prescription\images\image1.jpg" />
+    <Content Include="Reports\Telemed_Prescription\images\image2.jpg" />
+    <Content Include="Reports\Telemed_Prescription\Telemed_Prescription.html" />
+    <Content Include="Reports\MedCertificate.aspx" />
+    <Content Include="Reports\Prescription.aspx" />
+    <Content Include="Staff\PatientDetail.aspx" />
+    <Content Include="Staff\PatientRegistration.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="BrightCareAdmin.Master" />
+    <Content Include="Users.aspx" />
+    <Content Include="UserDetail.aspx" />
+    <Content Include="BrightCareStaff.Master" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="PatientEncounter.aspx" />
+    <Content Include="Physician\MyInfo.aspx" />
+    <Content Include="Physician\MyPatients.aspx" />
+    <Content Include="Physician\MyActivePatients.aspx" />
+    <Content Include="Physician\MyPatientDetail.aspx" />
+    <Content Include="PatientNew.aspx" />
+    <Content Include="Physician\PhysicianHtmlTemplate.aspx" />
+    <Content Include="WebForm5.aspx" />
+    <None Include="Properties\PublishProfiles\fleeHealtAssist.pubxml" />
+    <Content Include="Reports\Report.Master" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Login.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Dashboard.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminMain.Master.cs">
+      <DependentUpon>AdminMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMain.Master.designer.cs">
+      <DependentUpon>AdminMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AppClass\BaseModel.cs" />
+    <Compile Include="AppClass\CPTModel.cs" />
+    <Compile Include="AppClass\DispositionModel.cs" />
+    <Compile Include="AppClass\ICDModel.cs" />
+    <Compile Include="AppClass\MedicineModel.cs" />
+    <Compile Include="AppClass\PatientAttachmentModel.cs" />
+    <Compile Include="AppClass\PatientEncounterLogModel.cs" />
+    <Compile Include="AppClass\PatientFileModel.cs" />
+    <Compile Include="AppClass\PhysicianPrescriptionTemplateModel.cs" />
+    <Compile Include="AppClass\FacilityModel.cs" />
+    <Compile Include="AppClass\InsuranceCompanyModel.cs" />
+    <Compile Include="AppClass\InvoiceModel.cs" />
+    <Compile Include="AppClass\LookUpClass.cs" />
+    <Compile Include="AppClass\PatientAppointmentModel.cs" />
+    <Compile Include="AppClass\PatientAssessmentModel.cs" />
+    <Compile Include="AppClass\PatientCaseModel.cs" />
+    <Compile Include="AppClass\PatientDependentModel.cs" />
+    <Compile Include="AppClass\PatientEncounterBaseModel.cs" />
+    <Compile Include="AppClass\PatientEncounterModel.cs" />
+    <Compile Include="AppClass\PatientInsuranceModel.cs" />
+    <Compile Include="AppClass\PatientVitalsModel.cs" />
+    <Compile Include="AppClass\StatusModel.cs" />
+    <Compile Include="AppClass\PatientDiagnosisModel.cs" />
+    <Compile Include="AppClass\PatientMedicationModel.cs" />
+    <Compile Include="AppClass\PatientModel.cs" />
+    <Compile Include="AppClass\PatientProcedureModel.cs" />
+    <Compile Include="AppClass\PhysicianModel.cs" />
+    <Compile Include="AppClass\TxnClass.cs" />
+    <Compile Include="AppClass\UserClass.cs" />
+    <Compile Include="AppClass\UserModel.cs" />
+    <Compile Include="AppCommon\AppConfigReportClass.cs" />
+    <Compile Include="AppCommon\ConstantConfiguration.cs" />
+    <Compile Include="AppCommon\DALConnectionClass.cs" />
+    <Compile Include="AppCommon\EncryptDecryptProvider.cs" />
+    <Compile Include="AppDal\BaseDAL.cs" />
+    <Compile Include="AppDal\ContactStatusDAL.cs" />
+    <Compile Include="AppDal\CountryDAL.cs" />
+    <Compile Include="AppDal\CPTDAL.cs" />
+    <Compile Include="AppDal\DispositionDAL.cs" />
+    <Compile Include="AppDal\FacilityDAL.cs" />
+    <Compile Include="AppDal\InsuranceCompanyDAL.cs" />
+    <Compile Include="AppDal\InvoiceDAL.cs" />
+    <Compile Include="AppDal\InvoiceStatusDAL.cs" />
+    <Compile Include="AppDal\MedicineDAL.cs" />
+    <Compile Include="AppDal\PatientAppointmentDAL.cs" />
+    <Compile Include="AppDal\PatientAssessmentDAL.cs" />
+    <Compile Include="AppDal\PatientCaseDAL.cs" />
+    <Compile Include="AppDal\PatientCaseStatusDAL.cs" />
+    <Compile Include="AppDal\PatientDAL.cs" />
+    <Compile Include="AppDal\PatientDiagnosisDAL.cs" />
+    <Compile Include="AppDal\PatientEncounterDAL.cs" />
+    <Compile Include="AppDal\PatientEncounterLogDAL.cs" />
+    <Compile Include="AppDal\PatientFileDAL.cs" />
+    <Compile Include="AppDal\PatientInsuranceDAL.cs" />
+    <Compile Include="AppDal\PatientMedicationDAL.cs" />
+    <Compile Include="AppDal\PatientProcedureDAL.cs" />
+    <Compile Include="AppDal\PatientVitalsDAL.cs" />
+    <Compile Include="AppDal\PhysicianDAL.cs" />
+    <Compile Include="AppDal\PhysicianPrescriptionTemplateDAL.cs" />
+    <Compile Include="AppDal\PrincipalDependentDAL.cs" />
+    <Compile Include="AppDal\ProvinceDAL.cs" />
+    <Compile Include="AppDal\UserDAL.cs" />
+    <Compile Include="AppDal\UsersDAL.cs" />
+    <Compile Include="BrightCareAdmin.Master.cs">
+      <DependentUpon>BrightCareAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrightCareAdmin.Master.designer.cs">
+      <DependentUpon>BrightCareAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BrightCareStaff.Master.cs">
+      <DependentUpon>BrightCareStaff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrightCareStaff.Master.designer.cs">
+      <DependentUpon>BrightCareStaff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmLogin.aspx.cs">
+      <DependentUpon>ConfirmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmLogin.aspx.designer.cs">
+      <DependentUpon>ConfirmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts.aspx.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts.aspx.designer.cs">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PatientEncounterDetail.aspx.cs">
+      <DependentUpon>PatientEncounterDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientEncounterDetail.aspx.designer.cs">
+      <DependentUpon>PatientEncounterDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRegistration.aspx.cs">
+      <DependentUpon>PatientRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientRegistration.aspx.designer.cs">
+      <DependentUpon>PatientRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\EncounterList.aspx.cs">
+      <DependentUpon>EncounterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\EncounterList.aspx.designer.cs">
+      <DependentUpon>EncounterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\EncounterDetail.aspx.cs">
+      <DependentUpon>EncounterDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\EncounterDetail.aspx.designer.cs">
+      <DependentUpon>EncounterDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientCase.aspx.cs">
+      <DependentUpon>PatientCase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientCase.aspx.designer.cs">
+      <DependentUpon>PatientCase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.aspx.cs">
+      <DependentUpon>Patient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Patient.aspx.designer.cs">
+      <DependentUpon>Patient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicianMain.Master.cs">
+      <DependentUpon>PhysicianMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhysicianMain.Master.designer.cs">
+      <DependentUpon>PhysicianMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PatientDetail.aspx.cs">
+      <DependentUpon>PatientDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientDetail.aspx.designer.cs">
+      <DependentUpon>PatientDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientCaseDetail.aspx.cs">
+      <DependentUpon>PatientCaseDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientCaseDetail.aspx.designer.cs">
+      <DependentUpon>PatientCaseDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientNewCase.aspx.cs">
+      <DependentUpon>PatientNewCase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientNewCase.aspx.designer.cs">
+      <DependentUpon>PatientNewCase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician.aspx.cs">
+      <DependentUpon>Physician.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician.aspx.designer.cs">
+      <DependentUpon>Physician.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhysicianDetail.aspx.cs">
+      <DependentUpon>PhysicianDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhysicianDetail.aspx.designer.cs">
+      <DependentUpon>PhysicianDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients.aspx.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients.aspx.designer.cs">
+      <DependentUpon>Clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientDetail.aspx.cs">
+      <DependentUpon>ClientDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientDetail.aspx.designer.cs">
+      <DependentUpon>ClientDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Facility.aspx.cs">
+      <DependentUpon>Facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Facility.aspx.designer.cs">
+      <DependentUpon>Facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FacilityDetail.aspx.cs">
+      <DependentUpon>FacilityDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FacilityDetail.aspx.designer.cs">
+      <DependentUpon>FacilityDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactDetail.aspx.cs">
+      <DependentUpon>ContactDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactDetail.aspx.designer.cs">
+      <DependentUpon>ContactDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDetail.aspx.cs">
+      <DependentUpon>InvoiceDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceDetail.aspx.designer.cs">
+      <DependentUpon>InvoiceDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentDetail.aspx.cs">
+      <DependentUpon>AppointmentDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppointmentDetail.aspx.designer.cs">
+      <DependentUpon>AppointmentDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientSearch.aspx.cs">
+      <DependentUpon>PatientSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientSearch.aspx.designer.cs">
+      <DependentUpon>PatientSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewAppoinment.aspx.cs">
+      <DependentUpon>NewAppoinment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewAppoinment.aspx.designer.cs">
+      <DependentUpon>NewAppoinment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ConsentForm.aspx.cs">
+      <DependentUpon>ConsentForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ConsentForm.aspx.designer.cs">
+      <DependentUpon>ConsentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PatientPrescription.aspx.cs">
+      <DependentUpon>PatientPrescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\PatientPrescription.aspx.designer.cs">
+      <DependentUpon>PatientPrescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report.Master.cs">
+      <DependentUpon>Report.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report.Master.designer.cs">
+      <DependentUpon>Report.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MedCertificate.aspx.cs">
+      <DependentUpon>MedCertificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\MedCertificate.aspx.designer.cs">
+      <DependentUpon>MedCertificate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Prescription.aspx.cs">
+      <DependentUpon>Prescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Prescription.aspx.designer.cs">
+      <DependentUpon>Prescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\PatientDetail.aspx.cs">
+      <DependentUpon>PatientDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\PatientDetail.aspx.designer.cs">
+      <DependentUpon>PatientDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\PatientRegistration.aspx.cs">
+      <DependentUpon>PatientRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Staff\PatientRegistration.aspx.designer.cs">
+      <DependentUpon>PatientRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDetail.aspx.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDetail.aspx.designer.cs">
+      <DependentUpon>UserDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientEncounter.aspx.cs">
+      <DependentUpon>PatientEncounter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientEncounter.aspx.designer.cs">
+      <DependentUpon>PatientEncounter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\MyInfo.aspx.cs">
+      <DependentUpon>MyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\MyInfo.aspx.designer.cs">
+      <DependentUpon>MyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\MyPatients.aspx.cs">
+      <DependentUpon>MyPatients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\MyPatients.aspx.designer.cs">
+      <DependentUpon>MyPatients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\MyActivePatients.aspx.cs">
+      <DependentUpon>MyActivePatients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\MyActivePatients.aspx.designer.cs">
+      <DependentUpon>MyActivePatients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\MyPatientDetail.aspx.cs">
+      <DependentUpon>MyPatientDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\MyPatientDetail.aspx.designer.cs">
+      <DependentUpon>MyPatientDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PatientNew.aspx.cs">
+      <DependentUpon>PatientNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PatientNew.aspx.designer.cs">
+      <DependentUpon>PatientNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Physician\PhysicianHtmlTemplate.aspx.cs">
+      <DependentUpon>PhysicianHtmlTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Physician\PhysicianHtmlTemplate.aspx.designer.cs">
+      <DependentUpon>PhysicianHtmlTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Patient\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50989</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50989/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

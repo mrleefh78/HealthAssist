@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HealthAssist.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <script src="Content/Select/jquery-2.2.4.js"></script>
+    <link href="Content/Select/css/select2.css" rel="stylesheet">
+<script src="Content/Select/js/select2.js"></script>
+    <script src="Content/Select/js/select2.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+          <asp:DropDownList id="myDropDownlistID1" width="300px" runat="server">
+                <asp:listitem text="Select Color"></asp:listitem>
+                <asp:listitem text="Red"></asp:listitem>
+                <asp:listitem text="Green"></asp:listitem>
+                <asp:listitem text="Blue"></asp:listitem>
+                <asp:listitem text="Pink"></asp:listitem>
+                <asp:listitem text="Yellow"></asp:listitem>
+                <asp:listitem text="Lime"></asp:listitem>
+                <asp:listitem text="Black"></asp:listitem>
+                <asp:listitem text="Purple"></asp:listitem>
+                <asp:listitem text="Deep Pink"></asp:listitem>
+                <asp:listitem text="Orange"></asp:listitem>
+                <asp:listitem text="Light Pink"></asp:listitem>
+            </asp:DropDownList>
+
+        <script>
+            $(document).ready(function () { $("#myDropDownlistID1").select2(); });
+        </script>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
